@@ -10,6 +10,7 @@ public class PlayerControler : MonoBehaviour
     public float jumpForce = 5f;
     public float jumpInterval = .5f;
     public float jumpCountDown = 0;
+    
 
     void Start()
     {
@@ -30,6 +31,31 @@ public class PlayerControler : MonoBehaviour
             {
                 Jump();
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        OnCustomColisionEnter(other.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        OnCustomColisionEnter(other.gameObject);
+    }
+
+    void OnCustomColisionEnter(GameObject other) 
+    {
+        var isSensor = other.CompareTag("sensor");
+
+        if (isSensor)
+        {
+            GameManager.Instance.score++;
+            Debug.Log(GameManager.Instance.score);
+        }
+        else
+        {
+            Debug.Log("cano");
         }
     }
 

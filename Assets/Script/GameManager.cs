@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public float obstacleOffSetX = 0;
     public Vector2 obstacleOffSetY;
 
+    [HideInInspector]
+    public int score;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
