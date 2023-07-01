@@ -789,7 +789,7 @@ PrefabInstance:
     - target: {fileID: 1950043822794708011, guid: 538aedd1b1c38d840b847307ba17c993,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 1950043822794708011, guid: 538aedd1b1c38d840b847307ba17c993,
         type: 3}
@@ -1111,6 +1111,7 @@ MonoBehaviour:
   obstacleSpeed: 7
   obstacleOffSetX: 30
   obstacleOffSetY: {x: 1, y: 5}
+  score: 0
 --- !u!4 &1235483440
 Transform:
   m_ObjectHideFlags: 0
